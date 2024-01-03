@@ -1,0 +1,268 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="78" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\muhammad sinan rpk\Desktop\alteryx\03_Output\Wildcard.xlsx|||`consolidated$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Wildcard.xlsx
+Query=`consolidated$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Customer_ID" size="255" source="File: C:\Users\muhammad sinan rpk\Desktop\alteryx\03_Output\Wildcard.xlsx|||`consolidated$`" type="V_String" />
+            <Field name="Store Number" size="255" source="File: C:\Users\muhammad sinan rpk\Desktop\alteryx\03_Output\Wildcard.xlsx|||`consolidated$`" type="V_String" />
+            <Field name="Customer Segment" size="255" source="File: C:\Users\muhammad sinan rpk\Desktop\alteryx\03_Output\Wildcard.xlsx|||`consolidated$`" type="V_String" />
+            <Field name="First Name" size="255" source="File: C:\Users\muhammad sinan rpk\Desktop\alteryx\03_Output\Wildcard.xlsx|||`consolidated$`" type="V_String" />
+            <Field name="Last Name" size="255" source="File: C:\Users\muhammad sinan rpk\Desktop\alteryx\03_Output\Wildcard.xlsx|||`consolidated$`" type="V_String" />
+            <Field name="Address" size="255" source="File: C:\Users\muhammad sinan rpk\Desktop\alteryx\03_Output\Wildcard.xlsx|||`consolidated$`" type="V_String" />
+            <Field name="City" size="255" source="File: C:\Users\muhammad sinan rpk\Desktop\alteryx\03_Output\Wildcard.xlsx|||`consolidated$`" type="V_String" />
+            <Field name="State" size="255" source="File: C:\Users\muhammad sinan rpk\Desktop\alteryx\03_Output\Wildcard.xlsx|||`consolidated$`" type="V_String" />
+            <Field name="Zip" size="255" source="File: C:\Users\muhammad sinan rpk\Desktop\alteryx\03_Output\Wildcard.xlsx|||`consolidated$`" type="V_String" />
+            <Field name="Visits" source="File: C:\Users\muhammad sinan rpk\Desktop\alteryx\03_Output\Wildcard.xlsx|||`consolidated$`" type="Double" />
+            <Field name="Spend" source="File: C:\Users\muhammad sinan rpk\Desktop\alteryx\03_Output\Wildcard.xlsx|||`consolidated$`" type="Double" />
+            <Field name="FileName" size="255" source="File: C:\Users\muhammad sinan rpk\Desktop\alteryx\03_Output\Wildcard.xlsx|||`consolidated$`" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="570" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="25">C:\Users\muhammad sinan rpk\Desktop\alteryx\03_Output\splitting\multiple file\multisplit.xlsx|||sheet1</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <PreserveFormat>False</PreserveFormat>
+            <UNCLocal>False</UNCLocal>
+            <SkipFieldNames>False</SkipFieldNames>
+            <OutputOption>Create</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="True" />
+          <MultiFileType>Path</MultiFileType>
+          <MultiFileField>fullpath</MultiFileField>
+          <KeepField value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>multisplit.xlsx
+Query=sheet1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="270" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="CEIL([RecordID]/500)" field="Group" size="4" type="Int32" />
+            <FormulaField expression="'C:\Users\muhammad sinan rpk\Desktop\alteryx\03_Output\splitting\multiple file\'&#xA;+'food'+'.xlsx|||'+'sheet'+ToString([Group])" field="fullpath" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Group = CEIL([RecordID]/500)
+fullpath = 'C:\Users\muhammad sinan rpk\Desktop\alt...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="318" y="-6" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="fullpath" action="GroupBy" rename="fullpath" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="150" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Customer Segment" action="GroupBy" rename="Customer Segment" />
+            <SummarizeField field="Store Number" action="CountDistinct" rename="CountDistinct_Store Number" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="162" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>RecordID</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings>
+        <Position x="558" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Ranges">-500</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings Macro="SelectRecords.yxmc" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="414" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="Group" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Group - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>output_splitting</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="b62a7c88-36c8-4fe1-8353-ca116d4f8bfa" />
+      <Telemetry>
+        <PreviousWorkflowId value="f52cabb3-e6cc-4de2-9707-0ba8725ba81c" />
+        <OriginWorkflowId value="f52cabb3-e6cc-4de2-9707-0ba8725ba81c" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

@@ -1,0 +1,456 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="1326" y="366" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>generating consolidated output</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="260" y="44" width="122" height="582" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>input</Caption>
+          <Style TextColor="#314c4a" FillColor="#80ff80" BorderColor="#314c4a" Transparency="50" Margin="10" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>input</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="6">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="270" y="78" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="FileName" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Consumer.xlsx|||`Sheet1$`</File>
+              <FormatSpecificOptions>
+                <FirstRowData>False</FirstRowData>
+                <ImportLine>1</ImportLine>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Consumer.xlsx
+Query=`Sheet1$`</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Customer_ID" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Consumer.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Store Number" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Consumer.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Customer Segment" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Consumer.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="First Name" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Consumer.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Last Name" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Consumer.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Address" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Consumer.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="City" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Consumer.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="State" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Consumer.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Zip" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Consumer.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Visits" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Consumer.xlsx|||`Sheet1$`" type="Double" />
+                <Field name="Spend" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Consumer.xlsx|||`Sheet1$`" type="Double" />
+                <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="7">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="270" y="186" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="FileName" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Corporate.xlsx|||`Sheet1$`</File>
+              <FormatSpecificOptions>
+                <FirstRowData>False</FirstRowData>
+                <ImportLine>1</ImportLine>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Corporate.xlsx
+Query=`Sheet1$`</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Customer_ID" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Corporate.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Store Number" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Corporate.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Customer Segment" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Corporate.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="First Name" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Corporate.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Last Name" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Corporate.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Address" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Corporate.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="City" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Corporate.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="State" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Corporate.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Zip" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Corporate.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Visits" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Corporate.xlsx|||`Sheet1$`" type="Double" />
+                <Field name="Spend" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Corporate.xlsx|||`Sheet1$`" type="Double" />
+                <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="8">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="270" y="354" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="FileName" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Home Office.xlsx|||`Sheet1$`</File>
+              <FormatSpecificOptions>
+                <FirstRowData>False</FirstRowData>
+                <ImportLine>1</ImportLine>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Home Office.xlsx
+Query=`Sheet1$`</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Customer_ID" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Home Office.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Store Number" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Home Office.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Customer Segment" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Home Office.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="First Name" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Home Office.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Last Name" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Home Office.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Address" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Home Office.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="City" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Home Office.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="State" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Home Office.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Zip" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Home Office.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Visits" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Home Office.xlsx|||`Sheet1$`" type="Double" />
+                <Field name="Spend" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Home Office.xlsx|||`Sheet1$`" type="Double" />
+                <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="9">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="270" y="510" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="FileName" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Small Business.xlsx|||`Sheet1$`</File>
+              <FormatSpecificOptions>
+                <FirstRowData>False</FirstRowData>
+                <ImportLine>1</ImportLine>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Small Business.xlsx
+Query=`Sheet1$`</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Customer_ID" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Small Business.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Store Number" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Small Business.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Customer Segment" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Small Business.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="First Name" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Small Business.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Last Name" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Small Business.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Address" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Small Business.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="City" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Small Business.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="State" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Small Business.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Zip" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Small Business.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Visits" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Small Business.xlsx|||`Sheet1$`" type="Double" />
+                <Field name="Spend" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Small Business.xlsx|||`Sheet1$`" type="Double" />
+                <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="54" y="234" width="156" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>to select individual files</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="773" y="245" width="156" height="165" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>consplidation</Caption>
+          <Style TextColor="#314c4a" FillColor="#ff80ff" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>consplidation</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="10">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="798" y="294" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <AutoResetMode>ByName</AutoResetMode>
+              <MultiMetaInfo>
+                <MetaInfo name="#1">
+                  <RecordInfo>
+                    <Field name="Customer_ID" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Consumer.xlsx|||`Sheet1$`" type="V_String" column="1" />
+                    <Field name="Store Number" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Consumer.xlsx|||`Sheet1$`" type="V_String" column="2" />
+                    <Field name="Customer Segment" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Consumer.xlsx|||`Sheet1$`" type="V_String" column="3" />
+                    <Field name="First Name" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Consumer.xlsx|||`Sheet1$`" type="V_String" column="4" />
+                    <Field name="Last Name" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Consumer.xlsx|||`Sheet1$`" type="V_String" column="5" />
+                    <Field name="Address" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Consumer.xlsx|||`Sheet1$`" type="V_String" column="6" />
+                    <Field name="City" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Consumer.xlsx|||`Sheet1$`" type="V_String" column="7" />
+                    <Field name="State" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Consumer.xlsx|||`Sheet1$`" type="V_String" column="8" />
+                    <Field name="Zip" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Consumer.xlsx|||`Sheet1$`" type="V_String" column="9" />
+                    <Field name="Visits" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Consumer.xlsx|||`Sheet1$`" type="Double" column="10" />
+                    <Field name="Spend" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Consumer.xlsx|||`Sheet1$`" type="Double" column="11" />
+                    <Field name="FileName" size="254" source="File: FileName" type="V_WString" column="12" />
+                  </RecordInfo>
+                </MetaInfo>
+                <MetaInfo name="#2">
+                  <RecordInfo>
+                    <Field name="Customer_ID" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Corporate.xlsx|||`Sheet1$`" type="V_String" column="1" />
+                    <Field name="Store Number" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Corporate.xlsx|||`Sheet1$`" type="V_String" column="2" />
+                    <Field name="Customer Segment" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Corporate.xlsx|||`Sheet1$`" type="V_String" column="3" />
+                    <Field name="First Name" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Corporate.xlsx|||`Sheet1$`" type="V_String" column="4" />
+                    <Field name="Last Name" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Corporate.xlsx|||`Sheet1$`" type="V_String" column="5" />
+                    <Field name="Address" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Corporate.xlsx|||`Sheet1$`" type="V_String" column="6" />
+                    <Field name="City" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Corporate.xlsx|||`Sheet1$`" type="V_String" column="7" />
+                    <Field name="State" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Corporate.xlsx|||`Sheet1$`" type="V_String" column="8" />
+                    <Field name="Zip" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Corporate.xlsx|||`Sheet1$`" type="V_String" column="9" />
+                    <Field name="Visits" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Corporate.xlsx|||`Sheet1$`" type="Double" column="10" />
+                    <Field name="Spend" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\Corporate.xlsx|||`Sheet1$`" type="Double" column="11" />
+                    <Field name="FileName" size="254" source="File: FileName" type="V_WString" column="12" />
+                  </RecordInfo>
+                </MetaInfo>
+                <MetaInfo name="home office">
+                  <RecordInfo>
+                    <Field name="Customer_ID" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Home Office.xlsx|||`Sheet1$`" type="V_String" column="1" />
+                    <Field name="Store Number" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Home Office.xlsx|||`Sheet1$`" type="V_String" column="2" />
+                    <Field name="Customer Segment" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Home Office.xlsx|||`Sheet1$`" type="V_String" column="3" />
+                    <Field name="First Name" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Home Office.xlsx|||`Sheet1$`" type="V_String" column="4" />
+                    <Field name="Last Name" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Home Office.xlsx|||`Sheet1$`" type="V_String" column="5" />
+                    <Field name="Address" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Home Office.xlsx|||`Sheet1$`" type="V_String" column="6" />
+                    <Field name="City" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Home Office.xlsx|||`Sheet1$`" type="V_String" column="7" />
+                    <Field name="State" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Home Office.xlsx|||`Sheet1$`" type="V_String" column="8" />
+                    <Field name="Zip" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Home Office.xlsx|||`Sheet1$`" type="V_String" column="9" />
+                    <Field name="Visits" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Home Office.xlsx|||`Sheet1$`" type="Double" column="10" />
+                    <Field name="Spend" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Home Office.xlsx|||`Sheet1$`" type="Double" column="11" />
+                    <Field name="FileName" size="254" source="File: FileName" type="V_WString" column="12" />
+                  </RecordInfo>
+                </MetaInfo>
+                <MetaInfo name="#4">
+                  <RecordInfo>
+                    <Field name="Customer_ID" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Small Business.xlsx|||`Sheet1$`" type="V_String" column="1" />
+                    <Field name="Store Number" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Small Business.xlsx|||`Sheet1$`" type="V_String" column="2" />
+                    <Field name="Customer Segment" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Small Business.xlsx|||`Sheet1$`" type="V_String" column="3" />
+                    <Field name="First Name" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Small Business.xlsx|||`Sheet1$`" type="V_String" column="4" />
+                    <Field name="Last Name" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Small Business.xlsx|||`Sheet1$`" type="V_String" column="5" />
+                    <Field name="Address" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Small Business.xlsx|||`Sheet1$`" type="V_String" column="6" />
+                    <Field name="City" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Small Business.xlsx|||`Sheet1$`" type="V_String" column="7" />
+                    <Field name="State" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Small Business.xlsx|||`Sheet1$`" type="V_String" column="8" />
+                    <Field name="Zip" size="255" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Small Business.xlsx|||`Sheet1$`" type="V_String" column="9" />
+                    <Field name="Visits" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Small Business.xlsx|||`Sheet1$`" type="Double" column="10" />
+                    <Field name="Spend" source="File: C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\01_Input\sub\Small Business.xlsx|||`Sheet1$`" type="Double" column="11" />
+                    <Field name="FileName" size="254" source="File: FileName" type="V_WString" column="12" />
+                  </RecordInfo>
+                </MetaInfo>
+              </MultiMetaInfo>
+              <ByName_ErrorMode>Warning</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ManualDelayed</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>data consolidation</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1172" y="260" width="119" height="135" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>output</Caption>
+          <Style TextColor="#314c4a" FillColor="#00ff00" BorderColor="#00ff40" Transparency="50" Margin="10" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>output</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="11">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="1182" y="294" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="25">C:\Users\muhammad sinan rpk\Downloads\Telegram Desktop\Data Consolidation\03_Output\Union.xlsx|||peaky</File>
+              <Passwords />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <PreserveFormat>False</PreserveFormat>
+                <UNCLocal>False</UNCLocal>
+                <SkipFieldNames>False</SkipFieldNames>
+                <OutputOption>Overwrite</OutputOption>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Union.xlsx
+Query=peaky</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection name="#1" Wireless="True">
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection name="#2" Wireless="True">
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection name="home office" Wireless="True">
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection name="#4" Wireless="True">
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection name="consolidated output string">
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>consolidation_01</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="c4d72c8f-7a55-4943-9bb1-8a1a7ae16410" />
+      <Telemetry>
+        <PreviousWorkflowId value="d200b0fd-6151-42cd-a5c4-5c034133776e" />
+        <OriginWorkflowId value="132f1284-ed3b-408c-9b9a-84e914b45140" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
